@@ -14,8 +14,8 @@ RUN apt-get -q -y install libleptonica-dev
 RUN apt-get -q -y install libtesseract3 libtesseract-dev
 RUN apt-get install -q -y tesseract-ocr-eng
 
-RUN go get -u -v github.com/tleyden/open-ocr
+RUN go get -u -v github.com/amirsdream/open-ocr
 
 # build open-ocr-preprocessor binary and copy it to /usr/bin
-RUN cd $GOPATH/src/github.com/tleyden/open-ocr/cli-preprocessor && go build -v -o open-ocr-preprocessor && cp open-ocr-preprocessor /usr/bin
+RUN cd $GOPATH/src/github.com/amirsdream/open-ocr/cli-preprocessor && go build -v -o open-ocr-preprocessor && cp open-ocr-preprocessor /usr/bin
 
